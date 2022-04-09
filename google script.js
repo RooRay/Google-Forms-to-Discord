@@ -1,4 +1,4 @@
-const POST_URL = "WEBBHOOK URL";
+const POST_URL = "PUT YOUR WEBHOOK URL HERE";
 
 function onSubmit(e) {
     const response = e.response.getItemResponses();
@@ -42,13 +42,13 @@ function onSubmit(e) {
             "Content-Type": "application/json",
         },
         "payload": JSON.stringify({
-            "content": "‌",
+            "timestamp": new Date().toISOString(),
             "embeds": [{
-                "title": "Some nice title here",
-              "color": 33023, // This is optional, you can look for decimal colour codes at https://www.webtoolkitonline.com/hexadecimal-decimal-color-converter.html
+                "title": "New reply to the Storage Upgrades form!",
+              "color": 1691354, // This is optional, you can look for decimal colour codes at https://www.webtoolkitonline.com/hexadecimal-decimal-color-converter.html
                 "fields": items,
                 "footer": {
-                    "text": "Some footer here"
+                    "text": "for the ActiniumCloud staff team! Made by Iku and improved by RooRay and others"
                 }
             }]
         })
