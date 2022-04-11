@@ -42,14 +42,14 @@ function onSubmit(e) {
             "Content-Type": "application/json",
         },
         "payload": JSON.stringify({
-            "timestamp": new Date().toISOString(),
             "embeds": [{
-                "title": "New reply to the Storage Upgrades form!",
-              "color": 1691354, // This is optional, you can look for decimal colour codes at https://www.webtoolkitonline.com/hexadecimal-decimal-color-converter.html
+                "title": "New reply to the Storage Upgrades form!", // Change this if you want to change the main title of the embed
+                "color": 1691354, // This is optional, you can look for decimal colour codes at https://www.webtoolkitonline.com/hexadecimal-decimal-color-converter.html
                 "fields": items,
-                "footer": {
-                    "text": "for the ActiniumCloud staff team! Made by Iku and improved by RooRay and others"
-                }
+                 "footer": {
+                    "text": "Made by Iku and improved by RooRay and others" // Change this to change the footer before the timestamp
+                },
+                "timestamp": new Date().toISOString()
             }]
         })
     };
